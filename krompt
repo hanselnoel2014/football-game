@@ -1,0 +1,22 @@
+I am making a Amercan football retro styled game
+I should have a player and the controls of going forward,backward,left,and right...
+there should be 2 other players that are trying to get you
+the field should be green and have all the yard lines
+there should be a touchdown zone with a yellow goal post as of American football
+--------------------------------------------------------
+Uvicorn server                  
+app.py
+requirements.txt
+tech stack
+fastapi
+jinja2
+html
+css
+--------------------------------------------------------------
+Make the screen for the field larger
+There should be 4 players on each side of the team
+there should be a ball when a player has the ball
+when i press space i should pass the ball but if a defender is infront of me then i cannot pass
+there should be a annimation when i pass the ball
+the players on each team should be constanlly moving and the other team should be a bit more faster
+every hundred points the levels will get harder and the backround should change between the 4 seasons

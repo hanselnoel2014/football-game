@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #0d0d1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 18px;
+    color: #f5c518;
+    text-shadow: 3px 3px 0 #b8860b, 6px 6px 0 rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ── HUD ── */
+#hud {
+    display: flex;
+    gap: 30px;
+    background: #0d0d1a;
+    border: 3px solid #f5c518;
+    padding: 8px 24px;
+    border-radius: 4px;
+    box-shadow: 0 0 14px rgba(245,197,24,0.4);
+}
+
+.hud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.hud-label {
+    font-size: 6px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.hud-value {
+    font-size: 13px;
+    color: #f5c518;
+}
+
+.hud-red {
+    color: #ef5350;
+}
+
+/* ── Canvas ── */
+#canvas-container {
+    position: relative;
+    border: 4px solid #f5c518;
+    box-shadow: 0 0 28px rgba(245,197,24,0.5), inset 0 0 12px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* ── Overlay ── */
+#overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    z-index: 10;
+    padding: 20px;
+}
+
+#overlay h2 {
+    font-size: 20px;
+    color: #f5c518;
+    text-shadow: 3px 3px 0 #000;
+    text-align: center;
+}
+
+#overlay-msg {
+    font-size: 8px;
+    color: #ccc;
+    text-align: center;
+    line-height: 2.2;
+}
+
+/* ── Player Picker ── */
+#picker-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.picker-title {
+    font-size: 9px;
+    color: #f5c518;
+    letter-spacing: 1px;
+}
+
+#picker-cards {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.picker-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: #1a1a2e;
+    border: 2px solid #333;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+    min-width: 72px;
+}
+
+.picker-card span {
+    font-size: 5px;
+    color: #aaa;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.picker-card:hover {
+    border-color: #f5c518;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245,197,24,0.3);
+}
+
+.picker-card.selected {
+    border-color: #f5c518;
+    background: #22223a;
+    box-shadow: 0 0 14px rgba(245,197,24,0.5);
+}
+
+.picker-card.selected span {
+    color: #f5c518;
+}
+
+/* ── Start Button ── */
+#startBtn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    background: #f5c518;
+    color: #1a1a2e;
+    border: none;
+    padding: 14px 32px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 4px 4px 0 #b8860b;
+    transition: transform 0.1s, box-shadow 0.1s;
+    letter-spacing: 1px;
+}
+
+#startBtn:hover  { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 #b8860b; }
+#startBtn:active { transform: translate(2px,2px);   box-shadow: 2px 2px 0 #b8860b; }
+
+/* ── Controls hint ── */
+#controls-hint {
+    display: flex;
+    gap: 10px;
+    font-size: 6px;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+#controls-hint span {
+    background: #1a1a2e;
+    border: 1px solid #333;
+    padding: 4px 8px;
+    border-radius: 2px;
+}

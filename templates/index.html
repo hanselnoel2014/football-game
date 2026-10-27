@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Football</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <div id="game-wrapper">
+
+        <h1>🏈 RETRO FOOTBALL</h1>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div class="hud-item">
+                <span class="hud-label">SCORE</span>
+                <span class="hud-value" id="score">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">LEVEL</span>
+                <span class="hud-value" id="level">1</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">YARDS</span>
+                <span class="hud-value" id="yards">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">SEASON</span>
+                <span class="hud-value" id="season">SPRING</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">VS</span>
+                <span class="hud-value hud-red" id="opponent">VIPERS</span>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <div id="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Overlay (start / result) -->
+            <div id="overlay">
+                <h2>RETRO FOOTBALL</h2>
+
+                <!-- Player picker -->
+                <div id="picker-section">
+                    <p class="picker-title">CHOOSE YOUR PLAYER</p>
+                    <div id="picker-cards"></div>
+                </div>
+
+                <p id="overlay-msg">
+                    ARROW KEYS / WASD — Move<br/>
+                    SPACE — Pass to open teammate<br/>
+                    ★ = ball carrier<br/><br/>
+                    Reach the END ZONE · Don't get tackled!<br/>
+                    Every season = new rival team + harder AI
+                </p>
+
+                <button id="startBtn">KICK OFF!</button>
+            </div>
+        </div>
+
+        <!-- Controls hint -->
+        <div id="controls-hint">
+            <span>↑ W</span>
+            <span>↓ S</span>
+            <span>← A</span>
+            <span>→ D</span>
+            <span>SPACE = PASS</span>
+        </div>
+
+    </div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
